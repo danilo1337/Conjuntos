@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.conjuntos.interfaces.TelaController">
+   <children>
+      <Label layoutX="404.0" layoutY="40.0" text="Conjunto B">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="40.0" text="Conjunto A">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="88.0" text="Tamanho" />
+      <Label layoutX="335.0" layoutY="92.0" text="Tamanho" />
+      <TextField fx:id="tamConjA" layoutX="100.0" layoutY="83.0" prefHeight="22.0" prefWidth="79.0" />
+      <TextField fx:id="tamConjB" layoutX="400.0" layoutY="88.0" prefHeight="22.0" prefWidth="79.0" />
+      <Button fx:id="criarA" layoutX="191.0" layoutY="83.0" mnemonicParsing="false" onAction="#botaoCriarA" prefHeight="22.0" prefWidth="61.0" text="Criar" />
+      <Button fx:id="criarB" layoutX="491.0" layoutY="88.0" mnemonicParsing="false" onAction="#botaoCriarB" prefHeight="22.0" prefWidth="61.0" text="Criar" />
+      <Label layoutX="27.0" layoutY="123.0" text="Elementos" />
+      <TextField fx:id="incluirConjA" layoutX="100.0" layoutY="118.0" prefHeight="22.0" prefWidth="79.0" />
+      <Button fx:id="incluirA" layoutX="191.0" layoutY="122.0" mnemonicParsing="false" onAction="#botaoIncluirA" prefHeight="22.0" prefWidth="61.0" text="Incluir" />
+      <Label layoutX="327.0" layoutY="127.0" text="Elementos" />
+      <TextField fx:id="incluirConjB" layoutX="400.0" layoutY="123.0" prefHeight="22.0" prefWidth="79.0" />
+      <Button fx:id="incluirB" layoutX="491.0" layoutY="123.0" mnemonicParsing="false" onAction="#botaoIncluirB" prefHeight="22.0" prefWidth="61.0" text="Incluir" />
+      <TextField fx:id="elementosA" layoutX="82.0" layoutY="169.0" prefHeight="22.0" prefWidth="160.0" />
+      <Button fx:id="aUniaoB" layoutX="70.0" layoutY="239.0" mnemonicParsing="false" onAction="#botaoAUniaoB" prefHeight="22.0" prefWidth="120.0" text="A U B" />
+      <Button fx:id="aInterB" layoutX="70.0" layoutY="272.0" mnemonicParsing="false" onAction="#botaoAInterB" prefHeight="22.0" prefWidth="120.0" text="A ∩ B" />
+      <Button fx:id="aMenosB" layoutX="224.0" layoutY="239.0" mnemonicParsing="false" onAction="#botaoAMenosB" prefHeight="22.0" prefWidth="120.0" text="A - B" />
+      <Button fx:id="bMenosA" layoutX="224.0" layoutY="272.0" mnemonicParsing="false" onAction="#botaoBMenosA" prefHeight="25.0" prefWidth="120.0" text="B - A" />
+      <TextField fx:id="resultado" layoutX="106.0" layoutY="320.0" prefHeight="22.0" prefWidth="375.0" />
+      <Label layoutX="30.0" layoutY="322.0" text="Resultado">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="elementosB" layoutX="392.0" layoutY="182.0" prefHeight="22.0" prefWidth="160.0" />
+      <Button fx:id="aSubB" layoutX="369.0" layoutY="239.0" mnemonicParsing="false" onAction="#botaoASubB" prefHeight="22.0" prefWidth="120.0" text="A SUB B" />
+      <Button fx:id="bSubA" layoutX="369.0" layoutY="272.0" mnemonicParsing="false" onAction="#botaoBSubA" prefHeight="22.0" prefWidth="120.0" text="B SUB A" />
+   </children>
+</AnchorPane>
