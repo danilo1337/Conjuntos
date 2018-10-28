@@ -302,6 +302,7 @@ public class TelaController implements Initializable {
     	} 
     }
     
+    //desabilitar e habilitarbotoes da interface
     public void desabilitarBotoes(Boolean valor) {
     	elementosA.setDisable(valor);
 		elementosB.setDisable(valor);
