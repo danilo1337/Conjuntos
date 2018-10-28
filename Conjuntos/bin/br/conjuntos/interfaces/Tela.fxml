@@ -30,19 +30,27 @@
       <Label layoutX="327.0" layoutY="127.0" text="Elementos" />
       <TextField fx:id="incluirConjB" layoutX="400.0" layoutY="123.0" prefHeight="22.0" prefWidth="79.0" />
       <Button fx:id="incluirB" layoutX="491.0" layoutY="123.0" mnemonicParsing="false" onAction="#botaoIncluirB" prefHeight="22.0" prefWidth="61.0" text="Incluir" />
-      <TextField fx:id="elementosA" layoutX="82.0" layoutY="169.0" prefHeight="22.0" prefWidth="160.0" />
-      <Button fx:id="aUniaoB" layoutX="70.0" layoutY="239.0" mnemonicParsing="false" onAction="#botaoAUniaoB" prefHeight="22.0" prefWidth="120.0" text="A U B" />
-      <Button fx:id="aInterB" layoutX="70.0" layoutY="272.0" mnemonicParsing="false" onAction="#botaoAInterB" prefHeight="22.0" prefWidth="120.0" text="A ∩ B" />
-      <Button fx:id="aMenosB" layoutX="224.0" layoutY="239.0" mnemonicParsing="false" onAction="#botaoAMenosB" prefHeight="22.0" prefWidth="120.0" text="A - B" />
-      <Button fx:id="bMenosA" layoutX="224.0" layoutY="272.0" mnemonicParsing="false" onAction="#botaoBMenosA" prefHeight="25.0" prefWidth="120.0" text="B - A" />
+      <TextField fx:id="elementosA" layoutX="99.0" layoutY="169.0" prefHeight="22.0" prefWidth="160.0" />
+      <Button fx:id="aUniaoB" layoutX="80.0" layoutY="210.0" mnemonicParsing="false" onAction="#botaoAUniaoB" prefHeight="20.0" prefWidth="80.0" text="A U B" />
+      <Button fx:id="aInterB" layoutX="80.0" layoutY="243.0" mnemonicParsing="false" onAction="#botaoAInterB" prefHeight="20.0" prefWidth="80.0" text="A ∩ B" />
+      <Button fx:id="aMenosB" layoutX="175.0" layoutY="210.0" mnemonicParsing="false" onAction="#botaoAMenosB" prefHeight="20.0" prefWidth="80.0" text="A - B" />
+      <Button fx:id="bMenosA" layoutX="175.0" layoutY="243.0" mnemonicParsing="false" onAction="#botaoBMenosA" prefHeight="20.0" prefWidth="80.0" text="B - A" />
       <TextField fx:id="resultado" layoutX="106.0" layoutY="320.0" prefHeight="22.0" prefWidth="375.0" />
       <Label layoutX="30.0" layoutY="322.0" text="Resultado">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="elementosB" layoutX="392.0" layoutY="182.0" prefHeight="22.0" prefWidth="160.0" />
-      <Button fx:id="aSubB" layoutX="369.0" layoutY="239.0" mnemonicParsing="false" onAction="#botaoASubB" prefHeight="22.0" prefWidth="120.0" text="A SUB B" />
-      <Button fx:id="bSubA" layoutX="369.0" layoutY="272.0" mnemonicParsing="false" onAction="#botaoBSubA" prefHeight="22.0" prefWidth="120.0" text="B SUB A" />
+      <TextField fx:id="elementosB" layoutX="396.0" layoutY="169.0" prefHeight="22.0" prefWidth="160.0" />
+      <Button fx:id="aSubB" layoutX="264.0" layoutY="210.0" mnemonicParsing="false" onAction="#botaoASubB" prefHeight="20.0" prefWidth="80.0" text="A SUB B" />
+      <Button fx:id="bSubA" layoutX="264.0" layoutY="243.0" mnemonicParsing="false" onAction="#botaoBSubA" prefHeight="20.0" prefWidth="80.0" text="B SUB A" />
+      <Button fx:id="amplitude" layoutX="449.0" layoutY="210.0" mnemonicParsing="false" onAction="#botaoAmplitude" prefHeight="20.0" prefWidth="85.0" text="Amplitude" />
+      <Button fx:id="escalar" layoutX="449.0" layoutY="243.0" mnemonicParsing="false" onAction="#botaoEscalar" prefHeight="20.0" prefWidth="85.0" text="Escalar" />
+      <Button fx:id="identicos" layoutX="354.0" layoutY="210.0" mnemonicParsing="false" onAction="#botaoIdenticos" prefHeight="20.0" prefWidth="85.0" text="Idênticos" />
+      <Button fx:id="dijunto" layoutX="354.0" layoutY="243.0" mnemonicParsing="false" onAction="#botaoDijunto" prefHeight="20.0" prefWidth="85.0" text="Dijunto" />
+      <Button fx:id="conjuntoG" layoutX="80.0" layoutY="277.0" mnemonicParsing="false" onAction="#botaoConjuntoG" prefHeight="25.0" prefWidth="80.0" text="Conjunto G" />
+      <Button fx:id="conjuntoH" layoutX="175.0" layoutY="277.0" mnemonicParsing="false" onAction="#botaoConjuntoH" prefHeight="25.0" prefWidth="80.0" text="Conjunto H" />
+      <Button fx:id="subcadeia" layoutX="264.0" layoutY="277.0" mnemonicParsing="false" onAction="#botaoSubCadeia" prefHeight="25.0" prefWidth="80.0" text="Subcadeia" />
+      <Button fx:id="media" layoutX="357.0" layoutY="277.0" mnemonicParsing="false" onAction="#botaoMedia" prefHeight="25.0" prefWidth="80.0" text="Media" />
    </children>
 </AnchorPane>

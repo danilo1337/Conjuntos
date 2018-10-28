@@ -68,24 +68,42 @@ public class TelaController implements Initializable {
 	
     @FXML
     private Button aSubB;
-
+    
+    @FXML
+    private Button bSubA;
+    
+    
+    @FXML
+    private Button amplitude;
+    
+    @FXML
+    private Button escalar;
+    
+    @FXML
+    private Button dijunto;
+    
+    @FXML
+    private Button identicos;
+    
+    @FXML
+    private Button conjuntoG;
+    
+    @FXML
+    private Button conjuntoH;
+    
+    @FXML
+    private Button subcadeia;
+    
+    @FXML
+    private Button media;
 	Conjunto a = null;
 	Conjunto b = null;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		elementosA.setDisable(true);
-		elementosB.setDisable(true);
-		incluirConjA.setDisable(true);
-		incluirConjB.setDisable(true);
-		incluirA.setDisable(true);
-		incluirB.setDisable(true);
-		aUniaoB.setDisable(true);
-		aInterB.setDisable(true);
-		aMenosB.setDisable(true);
-		bMenosA.setDisable(true);
-		resultado.setDisable(true);
+		desabilitarBotoes(true);
 	}
+	
 
 	@FXML
 	private void botaoAUniaoB(ActionEvent event) {
@@ -124,15 +142,11 @@ public class TelaController implements Initializable {
 	private void botaoCriarA(ActionEvent event) {
 		try {
 			if (tamConjA.getText().isEmpty())
-				throw new Exception("Não é permitido fazer essa operação!");
+				throw new Exception("Não é permitido fazer operação");
 			tamConjA.setDisable(true);
 			criarA.setDisable(true);
-			incluirA.setDisable(false);
-			incluirConjA.setDisable(false);
-			aUniaoB.setDisable(false);
-			aInterB.setDisable(false);
-			aMenosB.setDisable(false);
-			bMenosA.setDisable(false);
+			desabilitarBotoes(false);
+			
 			a = new Conjunto(Integer.parseInt(tamConjA.getText()));
 
 		} catch (Exception e) {
@@ -145,15 +159,10 @@ public class TelaController implements Initializable {
 	private void botaoCriarB(ActionEvent event) {
 		try {
 			if (tamConjB.getText().isEmpty())
-				throw new Exception("Não é permitido fazer essa operação!");
+				throw new Exception("Não é permitido fazer operação");
 			tamConjB.setDisable(true);
 			criarB.setDisable(true);
-			incluirB.setDisable(false);
-			incluirConjB.setDisable(false);
-			aUniaoB.setDisable(false);
-			aInterB.setDisable(false);
-			aMenosB.setDisable(false);
-			bMenosA.setDisable(false);
+			desabilitarBotoes(false);
 			b = new Conjunto(Integer.parseInt(tamConjB.getText()));
 
 		} catch (Exception e) {
@@ -203,6 +212,117 @@ public class TelaController implements Initializable {
 			String saida = ""+ b.eSubConjunto(a);
 			resultado.setText(saida);
 		} catch (Exception e) {
+			e.getMessage();
 		}
+    }
+    @FXML
+    private void botaoAmplitude(ActionEvent event) {
+    	try {
+    	String saida = ""+ a.amplitude(b);
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+    		e.getMessage();
+    	} 
+    }
+    
+    @FXML
+    private void botaoEscalar(ActionEvent event) {
+    	try {
+    	String saida = ""+ a.escalar(b);
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+			Alert a = new Alert(AlertType.ERROR, e.getMessage());
+			a.show();
+    	} 
+    }
+    
+    @FXML
+    private void botaoIdenticos(ActionEvent event) {
+    	try {
+    	String saida = ""+ a.identico(b);
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+			Alert a = new Alert(AlertType.ERROR, e.getMessage());
+			a.show();
+    	} 
+    }
+    
+    @FXML
+    private void botaoDijunto(ActionEvent event) {
+    	try {
+    	String saida = ""+ a.disjunto(b);
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+			Alert a = new Alert(AlertType.ERROR, e.getMessage());
+			a.show();
+    	} 
+    }
+    
+    @FXML
+    private void botaoConjuntoG(ActionEvent event) {
+    	try {
+    	String saida = ""+ a.subcadeiaConjuntoG(a).getConjunto();
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+			Alert a = new Alert(AlertType.ERROR, e.getMessage());
+			a.show();
+    	} 
+    }
+    
+    @FXML
+    private void botaoConjuntoH(ActionEvent event) {
+    	try {
+    	String saida = ""+ b.subcadeiaConjuntoH(b).getConjunto();
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+			Alert a = new Alert(AlertType.ERROR, e.getMessage());
+			a.show();
+    	} 
+    }
+    
+    @FXML
+    private void botaoSubCadeia(ActionEvent event) {
+    	try {
+    	String saida = ""+ a.subcadeiaConjuntoAuniaoB(b).getConjunto();
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+			Alert a = new Alert(AlertType.ERROR, e.getMessage());
+			a.show();
+    	} 
+    }
+    
+    @FXML
+    private void botaoMedia(ActionEvent event) {
+    	try {
+    	String saida = ""+ a.MediaConjuntos(b);
+    	resultado.setText(saida);
+    	}catch(Exception e) {
+			Alert a = new Alert(AlertType.ERROR, e.getMessage());
+			a.show();
+    	} 
+    }
+    
+    public void desabilitarBotoes(Boolean valor) {
+    	elementosA.setDisable(valor);
+		elementosB.setDisable(valor);
+		incluirConjA.setDisable(valor);
+		incluirConjB.setDisable(valor);
+		incluirA.setDisable(valor);
+		incluirB.setDisable(valor);
+		aUniaoB.setDisable(valor);
+		aInterB.setDisable(valor);
+		aMenosB.setDisable(valor);
+		bMenosA.setDisable(valor);
+		resultado.setDisable(valor);
+		aSubB.setDisable(valor);
+		bSubA.setDisable(valor);
+		identicos.setDisable(valor);
+		amplitude.setDisable(valor);
+		conjuntoG.setDisable(valor);
+		conjuntoH.setDisable(valor);
+		subcadeia.setDisable(valor);
+		media.setDisable(valor);
+		dijunto.setDisable(valor);
+		escalar.setDisable(valor);
     }
 }
